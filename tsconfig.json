@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "NodeNext",
+    "typeRoots": ["@types", "./node_modules/@types"],
+    "outDir": "dist",
+    "sourceMap": true,
+    "noImplicitAny": true
+  },
+  "include": ["src/**/*.ts", "@types/**/*.d.ts"]
+}
