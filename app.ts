@@ -13,7 +13,7 @@ import session from "express-session";
 import helmet from "helmet";
 import { config } from "dotenv";
 
-import { connectToDb } from "./config/connectToDb";
+import { connectToDb } from "./src/config/connectToDb";
 
 config();
 const app = express();
@@ -29,7 +29,7 @@ app.use(
 
 app.use(
   session({
-    secret: process.env.JWT_SEC,
+    secret: `${process.env.JWT_SEC}`,
     saveUninitialized: true,
     resave: true,
   }),
